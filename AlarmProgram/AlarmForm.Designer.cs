@@ -30,6 +30,9 @@ namespace AlarmProgram
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAlrDel = new System.Windows.Forms.Button();
+            this.btnAlrChg = new System.Windows.Forms.Button();
+            this.btnAlrAdd = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
@@ -39,13 +42,10 @@ namespace AlarmProgram
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.btnAlrAdd = new System.Windows.Forms.Button();
-            this.btnAlrChg = new System.Windows.Forms.Button();
-            this.btnAlrDel = new System.Windows.Forms.Button();
             this.AlarmBox = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAllReset = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -55,6 +55,7 @@ namespace AlarmProgram
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.btnAlrDel);
             this.groupBox1.Controls.Add(this.btnAlrChg);
             this.groupBox1.Controls.Add(this.btnAlrAdd);
@@ -67,13 +68,39 @@ namespace AlarmProgram
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(319, 228);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "알람 추가/수정/삭제";
+            // 
+            // btnAlrDel
+            // 
+            this.btnAlrDel.Location = new System.Drawing.Point(214, 191);
+            this.btnAlrDel.Name = "btnAlrDel";
+            this.btnAlrDel.Size = new System.Drawing.Size(75, 23);
+            this.btnAlrDel.TabIndex = 11;
+            this.btnAlrDel.Text = "삭제";
+            this.btnAlrDel.UseVisualStyleBackColor = true;
+            // 
+            // btnAlrChg
+            // 
+            this.btnAlrChg.Location = new System.Drawing.Point(120, 191);
+            this.btnAlrChg.Name = "btnAlrChg";
+            this.btnAlrChg.Size = new System.Drawing.Size(75, 23);
+            this.btnAlrChg.TabIndex = 10;
+            this.btnAlrChg.Text = "수정";
+            this.btnAlrChg.UseVisualStyleBackColor = true;
+            // 
+            // btnAlrAdd
+            // 
+            this.btnAlrAdd.Location = new System.Drawing.Point(24, 191);
+            this.btnAlrAdd.Name = "btnAlrAdd";
+            this.btnAlrAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAlrAdd.TabIndex = 9;
+            this.btnAlrAdd.Text = "추가";
+            this.btnAlrAdd.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
@@ -152,40 +179,6 @@ namespace AlarmProgram
             this.label1.TabIndex = 1;
             this.label1.Text = "알람 이름";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(89, 55);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 0;
-            // 
-            // btnAlrAdd
-            // 
-            this.btnAlrAdd.Location = new System.Drawing.Point(24, 191);
-            this.btnAlrAdd.Name = "btnAlrAdd";
-            this.btnAlrAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAlrAdd.TabIndex = 9;
-            this.btnAlrAdd.Text = "추가";
-            this.btnAlrAdd.UseVisualStyleBackColor = true;
-            // 
-            // btnAlrChg
-            // 
-            this.btnAlrChg.Location = new System.Drawing.Point(120, 191);
-            this.btnAlrChg.Name = "btnAlrChg";
-            this.btnAlrChg.Size = new System.Drawing.Size(75, 23);
-            this.btnAlrChg.TabIndex = 10;
-            this.btnAlrChg.Text = "수정";
-            this.btnAlrChg.UseVisualStyleBackColor = true;
-            // 
-            // btnAlrDel
-            // 
-            this.btnAlrDel.Location = new System.Drawing.Point(214, 191);
-            this.btnAlrDel.Name = "btnAlrDel";
-            this.btnAlrDel.Size = new System.Drawing.Size(75, 23);
-            this.btnAlrDel.TabIndex = 11;
-            this.btnAlrDel.Text = "삭제";
-            this.btnAlrDel.UseVisualStyleBackColor = true;
-            // 
             // AlarmBox
             // 
             this.AlarmBox.Controls.Add(this.dataGridView1);
@@ -214,6 +207,13 @@ namespace AlarmProgram
             this.btnAllReset.Text = "초기화";
             this.btnAllReset.UseVisualStyleBackColor = true;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(89, 55);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePicker1.TabIndex = 12;
+            // 
             // AlarmForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -241,7 +241,6 @@ namespace AlarmProgram
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
@@ -253,5 +252,6 @@ namespace AlarmProgram
         private System.Windows.Forms.GroupBox AlarmBox;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnAllReset;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

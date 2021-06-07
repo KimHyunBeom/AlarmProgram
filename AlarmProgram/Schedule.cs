@@ -8,5 +8,9 @@ namespace AlarmProgram
 {
     class Schedule
     {
+        public string ScheduleName { get; set; }
+        public string StartDate { get; set; }
+        public string FinishDate { get; set; }
+        public DateTime DateTimer { get; set; }
     }
 }
