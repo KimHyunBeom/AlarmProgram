@@ -30,6 +30,7 @@ namespace AlarmProgram
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnAlrDel = new System.Windows.Forms.Button();
             this.btnAlrChg = new System.Windows.Forms.Button();
             this.btnAlrAdd = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@ namespace AlarmProgram
             this.AlarmBox = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAllReset = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -74,6 +74,13 @@ namespace AlarmProgram
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "알람 추가/수정/삭제";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(89, 55);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePicker1.TabIndex = 12;
             // 
             // btnAlrDel
             // 
@@ -105,9 +112,6 @@ namespace AlarmProgram
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "오전",
-            "오후"});
             this.comboBox1.Location = new System.Drawing.Point(89, 142);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
@@ -206,13 +210,6 @@ namespace AlarmProgram
             this.btnAllReset.TabIndex = 6;
             this.btnAllReset.Text = "초기화";
             this.btnAllReset.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(89, 55);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 12;
             // 
             // AlarmForm
             // 

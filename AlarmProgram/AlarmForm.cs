@@ -15,6 +15,9 @@ namespace AlarmProgram
         public AlarmForm()
         {
             InitializeComponent();
+
+            var dataSource = new string[] { "오전", "오후" };
+            comboBox1.DataSource = dataSource;
         }
     }
 }

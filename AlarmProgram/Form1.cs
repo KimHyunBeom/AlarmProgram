@@ -42,6 +42,9 @@ namespace AlarmProgram
             dt2.AcceptChanges();
 
             this.dataGridView2.DataSource = dt2;
+
+            label3.Text = dt1.Rows.Count.ToString();
+            label4.Text = dt2.Rows.Count.ToString();
         }
 
         private void ScheduleDataTable()
