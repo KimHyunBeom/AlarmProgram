@@ -35,11 +35,18 @@ namespace AlarmProgram
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.AlarmNumber = new System.Windows.Forms.Label();
+            this.ScheduleNumber = new System.Windows.Forms.Label();
             this.ScheduleBox = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.AlarmBox = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAllReset = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.ScheduleBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.AlarmBox.SuspendLayout();
@@ -68,7 +75,7 @@ namespace AlarmProgram
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(126, 22);
             this.toolStripMenuItem3.Text = "알람 추가";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
@@ -83,18 +90,58 @@ namespace AlarmProgram
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(126, 22);
             this.toolStripMenuItem4.Text = "일정 추가";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(69, 27);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.AlarmNumber);
+            this.groupBox1.Controls.Add(this.ScheduleNumber);
+            this.groupBox1.Location = new System.Drawing.Point(395, 27);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(441, 136);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "설정 현황";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(348, 64);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 15);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(126, 64);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 15);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "label3";
+            // 
+            // AlarmNumber
+            // 
+            this.AlarmNumber.AutoSize = true;
+            this.AlarmNumber.Location = new System.Drawing.Point(244, 64);
+            this.AlarmNumber.Name = "AlarmNumber";
+            this.AlarmNumber.Size = new System.Drawing.Size(98, 15);
+            this.AlarmNumber.TabIndex = 1;
+            this.AlarmNumber.Text = "설정 된 알람 수 :";
+            // 
+            // ScheduleNumber
+            // 
+            this.ScheduleNumber.AutoSize = true;
+            this.ScheduleNumber.Location = new System.Drawing.Point(38, 64);
+            this.ScheduleNumber.Name = "ScheduleNumber";
+            this.ScheduleNumber.Size = new System.Drawing.Size(82, 15);
+            this.ScheduleNumber.TabIndex = 0;
+            this.ScheduleNumber.Text = "전체 일정 수 :";
             // 
             // ScheduleBox
             // 
@@ -104,7 +151,7 @@ namespace AlarmProgram
             this.ScheduleBox.Size = new System.Drawing.Size(1284, 250);
             this.ScheduleBox.TabIndex = 2;
             this.ScheduleBox.TabStop = false;
-            this.ScheduleBox.Text = "일정 현황";
+            this.ScheduleBox.Text = "일정 목록";
             // 
             // dataGridView1
             // 
@@ -123,7 +170,7 @@ namespace AlarmProgram
             this.AlarmBox.Size = new System.Drawing.Size(1284, 250);
             this.AlarmBox.TabIndex = 3;
             this.AlarmBox.TabStop = false;
-            this.AlarmBox.Text = "알람 현황";
+            this.AlarmBox.Text = "알람 목록";
             // 
             // dataGridView2
             // 
@@ -134,11 +181,31 @@ namespace AlarmProgram
             this.dataGridView2.Size = new System.Drawing.Size(1271, 222);
             this.dataGridView2.TabIndex = 0;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(922, 54);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(122, 42);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "삭제";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnAllReset
+            // 
+            this.btnAllReset.Location = new System.Drawing.Point(922, 102);
+            this.btnAllReset.Name = "btnAllReset";
+            this.btnAllReset.Size = new System.Drawing.Size(122, 42);
+            this.btnAllReset.TabIndex = 5;
+            this.btnAllReset.Text = "초기화";
+            this.btnAllReset.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1309, 681);
+            this.Controls.Add(this.btnAllReset);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.AlarmBox);
             this.Controls.Add(this.ScheduleBox);
             this.Controls.Add(this.groupBox1);
@@ -148,6 +215,8 @@ namespace AlarmProgram
             this.Text = "알람 관리 프로그램";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ScheduleBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.AlarmBox.ResumeLayout(false);
@@ -169,6 +238,12 @@ namespace AlarmProgram
         private System.Windows.Forms.GroupBox AlarmBox;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label AlarmNumber;
+        private System.Windows.Forms.Label ScheduleNumber;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnAllReset;
     }
 }
 
